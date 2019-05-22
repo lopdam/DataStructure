@@ -1,8 +1,7 @@
 # Data Structure
-## Estructura de Datos Usando Java.
 
 
-### Recursividad
+## Recursividad
 
 #### Busqueda Binaria
 
