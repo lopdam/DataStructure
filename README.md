@@ -1,10 +1,10 @@
 # Data Structure
-##Estructura de Datos Usando Java.
+## Estructura de Datos Usando Java.
 
 
-###Recursividad
+### Recursividad
 
-####Busqueda Binaria
+#### Busqueda Binaria
 
 ```java
 public class BusquedaBinaria {
@@ -49,7 +49,7 @@ public class BusquedaBinaria {
 
 }
 ```
-####Busqueda Binaria
+#### Busqueda Binaria
 
 ```java
 public class DecimalBinario {
@@ -86,7 +86,7 @@ public class DecimalBinario {
 
 ```
 
-####Suma de Arreglo
+#### Suma de Arreglo
 ```java
 /**
  *
@@ -116,7 +116,7 @@ public class SumaArreglo {
     }
   }
 ```
-####Suma de Arreglo en n/2 de pasos
+#### Suma de Arreglo en n/2 de pasos
 ```java
 /**
  *
