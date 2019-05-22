@@ -49,7 +49,7 @@ public class BusquedaBinaria {
 
 }
 ```
-#### Busqueda Binaria
+#### Decimal a Binario
 
 ```java
 public class DecimalBinario {
@@ -85,7 +85,113 @@ public class DecimalBinario {
 }
 
 ```
+#### Invertir arreglo
+```java
+//lopdam
 
+/*Programe un método recursivo que invierta los números de un arreglo de enteros.
+El método recibe un arreglo y procede a invertir los elementos de este arreglo.
+La función debe ser inplace.*/
+
+public class InvertirArreglo{
+
+
+  public static void main(String[] args) {
+
+  }
+
+  public static int[] Invertir(int arreglo[]){
+
+  }
+}
+
+```
+#### Multiplicacion de Digitos
+```java
+//lopdam
+
+/*Escriba un programa recursivo que reciba un número entero positivo
+y retorne como resultado la multiplicación de los dígitos de este número.
+*/
+
+public class MultiplicacionDigitos{
+
+  public static void main(String[] args) {
+
+    int n=223;
+    int result=Multiplicar(n);
+    System.out.println(String.valueOf(result));
+  }
+
+  public static int Multiplicar(int n){
+
+   if(n<10){
+     return n;
+   }
+    return (n%10)*Multiplicar(n/10);
+  }
+}
+
+```
+#### Multiplicacion Numero
+
+```java
+//lopdam
+/*Escribir una función recursiva que devuelva la multiplicación de los primeros N enteros.
+El usuario solo proporcionará un número y usted debe retornar la multiplicación
+ de todos los números enteros desde el 1 hasta el número que ingresó el usuario (incluyéndolo).*/
+
+public class MultiplicacionNumber{
+
+  public static void main(String[] args) {
+    int n=3;
+    int result=Multiplicacion(n);
+    System.out.println(String.valueOf(result));
+  }
+
+  //La funcio es recursiva
+  //Devuelve la Multiplicacion de los n primero numeros, de un numero dado
+
+  public static int Multiplicacion(int n){
+    if(n==1){
+      return 1;
+    }
+  return n*Multiplicacion(--n);
+
+  }
+
+
+
+}
+```
+#### Multiplicacion Arreglo
+```java
+//lopdam
+
+/*Programar un algoritmo recursivo que
+permita multiplicar los elementos de un arreglo.*/
+
+public class MultiplicarArreglo{
+
+  public static void main(String[] args) {
+    int arreglo[] = {1, 2, 3, 4};
+
+    System.out.println(String.valueOf(Multiplicar(arreglo,0, arreglo.length-1)));
+  }
+
+  public static int Multiplicar(int arreglo[], int low, int high) {
+
+      if ((low + 1) == (high)) {
+          return arreglo[low]*arreglo[high];
+      } else if (low == high) {
+          return arreglo[low];
+      }
+
+      return arreglo[low]*arreglo[high]*Multiplicar(arreglo, ++low, --high);
+
+  }
+}
+```
 #### Suma de Arreglo
 ```java
 /**
@@ -147,4 +253,31 @@ public class SumaArreglo {
 
     }
   }
+```
+#### Suma de 2 hasta n par
+```java
+//lopdam
+/*Escribir un programa recursivo que encuentre la suma de los enteros positivos pares desde N hasta 2.
+El usuario proporcionará un número par y usted deberá retornar la suma de los enteros positivos pares.*/
+
+public class SumaPar{
+
+  public static void main(String[] args) {
+    int n=6;
+    int result=Suma(n);
+
+    System.out.println(String.valueOf(result));
+  }
+
+  //Sumar los m numero pares desde 2 hasta n
+  public static int Suma(int n){
+
+
+    n=(n%2==0)?n:--n;
+    if(n<=2){
+      return 2;
+    }
+    return n+Suma(n-2);
+  }
+}
 ```
