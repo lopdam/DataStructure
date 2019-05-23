@@ -10,8 +10,9 @@ public class InvertirArreglo{
   public static void main(String[] args) {
 
     int arreglo[] = {1, 2, 3, 4};
+    int nuevoArreglo[]=Invertir(arreglo,0, arreglo.length-1);
 
-    System.out.println(Invertir(arreglo,0, arreglo.length-1).toString());
+    System.out.println(ArregloString(nuevoArreglo));
 
   }
 
@@ -21,20 +22,32 @@ public class InvertirArreglo{
       int num2=arreglo[high];
 
       if ((low + 1) == (high)) {
-        arreglo[low]=num1;
-        arreglo[high]=num2;
+        arreglo[low]=num2;
+        arreglo[high]=num1;
         return arreglo;
         //  return arreglo[low] + arreglo[high];
       } else if (low == high) {
-          arreglo[low]==num1;
+          arreglo[low]=num2;
           return arreglo;
           //return arreglo[low];
       }
 
-      arreglo[low]=num1;
-      arreglo[high]=num2;
+      arreglo[low]=num2;
+      arreglo[high]=num1;
 
       return Invertir(arreglo, ++low, --high);
+
+  }
+  public static String ArregloString(int[] arreglo){
+    String cadena="{";
+    for (int i=0;i<arreglo.length;i++) {
+      if(i+1==arreglo.length){
+        cadena+=String.valueOf(arreglo[i])+"}";
+        break;
+      }
+      cadena+=String.valueOf(arreglo[i])+",";
+    }
+    return cadena;
 
   }
 }
